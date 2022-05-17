@@ -2,7 +2,7 @@
 
 use Psr\Http\Message\ServerRequestInterface;
 
-function sendMessageToSlackChannel(ServerRequestInterface $request)
+function sendMessageToSlack(ServerRequestInterface $request)
 {
     include 'config.php';
     $data = json_decode($request->getBody(), true);
