@@ -1,7 +1,7 @@
 # Cloud function triggered by http call 
 Google Cloud Function which is a HTTP-Trigger based function. It means that we can directly invoke it via a HTTPs endpoint that will be assigned to our function.
 
-We are going to use this endpoint to send message to our test Slack :slack: channel `test-webshop-cf`
+We are going to use this endpoint to send message to our test Slack channel `test-webshop-cf`
 
 ### Steps to run this function
 1.  Open GCC by following this link [Google cloud function list](https://console.cloud.google.com/functions/list).
@@ -56,4 +56,4 @@ gcloud projects describe <project_id>
 
 Play with other different parameters for `gcloud` command or chack the same functionality in GCC UI.
 
- :rocket: :google: :cloud:
+ :rocket: google :cloud:
