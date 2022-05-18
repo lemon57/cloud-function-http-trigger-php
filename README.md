@@ -30,6 +30,9 @@ git clone git@github.com:lemon57/cloud-function-http-trigger-php.git
 gcloud functions deploy <FUNC_NAME> --trigger-http \
   --region=<REGION> --runtime=php74
 ```
+Replace `FUNC_NAME` by your own function name.\
+Replace `REGION` by correct region name, in our case is `europe-west1`.\
+
 6. Check that the function deployed successfully:
 ```
 gcloud functions describe <FUNC_NAME> --region=<REGION>
@@ -49,9 +52,9 @@ curl -H "Content-Type: application/json" \
  -d '{"message":"Trigger GCF by curl command. By {your_name}"}' \
  https://<REGION>-<PROJECT_ID>.cloudfunctions.net/<FUNC_NAME>
 ```
-Replace FUNC_NAME by name of our php function.
-Replace REGION by current region in GCC project.
-Replace PROJECT_ID by name of our project in GCC. 
+Replace FUNC_NAME by name of our php function.\
+Replace REGION by current region in GCC project.\
+Replace PROJECT_ID by name of our project in GCC.\ 
 You can always check details about current project by this command:
 ```
 gcloud config list
@@ -64,7 +67,8 @@ gcloud projects describe <PROJECT_ID>
 ```
 gcloud functions logs read --execution-id=<EXECUTION_ID> --region=<REGION_NAME>
 ```
-Take `EXECUTION_ID` from the output after executing the commands: `gcloud functions call`.
+Take `EXECUTION_ID` from the output after executing the command: `gcloud functions call`.
+
 10. Check slack channel `test-webshop-cf` 
 
 Play with other different parameters for `gcloud` command or chack the same functionality in GCC UI.
