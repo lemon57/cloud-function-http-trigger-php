@@ -3,6 +3,8 @@ Google Cloud Function which is a HTTP-Trigger based function. It means that we c
 
 We are going to use this endpoint to send message to our test Slack channel `test-webshop-cf`
 
+Runtime: PHP 7.4
+
 ### Steps to run this function
 1.  Open GCC by following this link [Google cloud function list](https://console.cloud.google.com/functions/list).
 You will see the list already existing functions.
