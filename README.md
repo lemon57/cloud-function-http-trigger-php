@@ -27,24 +27,25 @@ git clone git@github.com:lemon57/cloud-function-http-trigger-php.git
 4. Define Slack webhook url in `config.php`. You can find this webhook -> [Slack channel webhook](https://api.slack.com/apps/A03FHHA7URG/incoming-webhooks?).
 5. Deploy this function:
 ```
-gcloud functions deploy sendMessageToSlack --trigger-http \
-  --region=europe-west1 --runtime=php74
+gcloud functions deploy <FUNC_NAME> --trigger-http \
+  --region=<REGION> --runtime=php74
 ```
 6. Check that the function deployed successfully:
 ```
-gcloud functions describe sendMessageToSlack --region=europe-west1
+gcloud functions describe <FUNC_NAME> --region=<REGION>
 ``` 
 7. Invoke the function by command:
 ```
-gcloud functions call --data '{"message":"Hello from boozt GCF workshop. Created by {your_name}"}' sendMessageToSlack --region=europe-west1
+gcloud functions call --data '{"message":"Hello from boozt GCF workshop. Created by {your_name}"}' <FUNC_NAME> --region=<REGION>
 ```
 8. Another way to trigger this function:
 ```
 curl -H "Content-Type: application/json" \
  -X POST \
  -d '{"message":"Trigger GCF by curl command. By {your_name}"}' \
- https://<REGION>-<PROJECT_ID>.cloudfunctions.net/sendMessageToSlack
+ https://<REGION>-<PROJECT_ID>.cloudfunctions.net/<FUNC_NAME>
 ```
+Replace FUNC_NAME by name of our php function.
 Replace REGION by current region in GCC project.
 Replace PROJECT_ID by name of our project in GCC. 
 You can always check details about current project by this command:
