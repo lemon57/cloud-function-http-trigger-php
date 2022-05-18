@@ -34,6 +34,10 @@ gcloud functions deploy <FUNC_NAME> --trigger-http \
 ```
 gcloud functions describe <FUNC_NAME> --region=<REGION>
 ``` 
+or you can check the list of functions by this command:
+```
+gcloud functions list | grep <KEY_WORD_FROM_FUNC_NAME>
+```
 7. Invoke the function by command:
 ```
 gcloud functions call --data '{"message":"Hello from boozt GCF workshop. Created by {your_name}"}' <FUNC_NAME> --region=<REGION>
