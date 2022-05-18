@@ -61,6 +61,7 @@ gcloud projects describe <PROJECT_ID>
 gcloud functions logs read --execution-id=<EXECUTION_ID> --region=<REGION_NAME>
 ```
 Take `EXECUTION_ID` from the output after executing the commands: `gcloud functions call`.
+10. Check slack channel `test-webshop-cf` 
 
 Play with other different parameters for `gcloud` command or chack the same functionality in GCC UI.
 
