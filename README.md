@@ -54,8 +54,13 @@ gcloud config list
 ```
 and then get more details about your project
 ```
-gcloud projects describe <project_id>
+gcloud projects describe <PROJECT_ID>
 ```
+9. Check the logs:
+```
+gcloud functions logs read --execution-id=<EXECUTION_ID> --region=<REGION_NAME>
+```
+Take `EXECUTION_ID` from the output after executing the commands: `gcloud functions call`.
 
 Play with other different parameters for `gcloud` command or chack the same functionality in GCC UI.
 
